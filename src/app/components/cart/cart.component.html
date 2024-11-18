@@ -1,0 +1,38 @@
+<div class="container mx-auto p-16">
+    <h2 class="text-3xl font-bold mb-6">Cart</h2>
+<div *ngIf="products.length > 0; else emptyCart">
+<div class="hero-content flex-col lg:flex-row justify-start gap-4" *ngFor="let product of products,let i=index" >
+    <img
+    [src]="product.image" alt="{{product.title}}" 
+      class="w-36 h-auto rounded-md"
+    />
+    <div>
+      <p class="text-2xl font-bold">{{product.title}}</p>
+      <p class="py-6">
+        {{product.description}}
+      </p>
+  
+      <!-- Quantity Selector -->
+      <div class="flex items-center gap-4">
+        <button
+          class="bg-gray-200 text-gray-800 px-3 py-1 rounded hover:bg-gray-300 active:bg-gray-400"
+          (click)="decreaseQuantity(i)"
+        >
+          -
+        </button>
+        <span id="quantity" class="text-lg font-medium">{{product.quantity}}</span>
+        <button
+          class="bg-gray-200 text-gray-800 px-3 py-1 rounded hover:bg-gray-300 active:bg-gray-400"
+          (click)="increaseQuantity(i)"
+        >
+          +
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-template #emptyCart>
+    <p class="text-gray-600">Your cart is empty.</p>
+  </ng-template>
+</div>
+  

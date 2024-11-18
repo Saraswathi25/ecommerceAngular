@@ -12,6 +12,9 @@ import { FilterComponent } from './components/product-list/filter/filter.compone
 import { ProductDetailComponent } from './components/container/product-detail/product-detail.component';
 import { setBackground } from './components/customDirectives/setBackground.directive';
 import { HighlightDirective } from './components/customDirectives/highlight.directive';
+import { CartComponent } from './components/cart/cart.component';
+import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -25,12 +28,14 @@ import { HighlightDirective } from './components/customDirectives/highlight.dire
     FilterComponent,
     ProductDetailComponent,
     setBackground,
-    HighlightDirective
+    HighlightDirective,
+    CartComponent
     
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -6,6 +6,7 @@ export class Product{
     "price": number;
     "stock": number;
     "inStock":boolean;
+    "quantity":number;
     "discountPercentage": number;
     "image": String;
 }
