@@ -1,0 +1,15 @@
+<div class="flex flex ">
+    <label class="flex items-center space-x-2 mr-2">
+        <input type="radio" name="radiobutton" class="radio radio-accent" checked="checked" value="all" [(ngModel)]="selectedRadio" (change)="onRadioChange()"/>
+        <span>{{'All ('+all+')'}}</span>
+      </label>
+      <label class="flex items-center space-x-2  mr-2">
+<input type="radio" name="radiobutton" class="radio radio-accent" value="true" [(ngModel)]="selectedRadio"  (change)="onRadioChange()"/>
+<span>{{'In Stock ('+inStock+')'}}</span>
+</label>
+<label class="flex items-center space-x-2  mr-2">
+<input type="radio" name="radiobutton" class="radio radio-accent" value="false" [(ngModel)]="selectedRadio"  (change)="onRadioChange()"/>
+<span>{{'Out of Stock ('+ outOfStock +')'}}</span>
+
+</label>
+</div>

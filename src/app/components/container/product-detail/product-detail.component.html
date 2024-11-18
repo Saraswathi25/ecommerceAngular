@@ -1,0 +1,28 @@
+<dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle"  [open]="isDialogOpen">
+  <div class="modal-box">
+  
+        <h2 class="card-title">{{product.title}}</h2>
+        <div class="badge mt-4" setbackground>{{product.discountPercentage}}% OFF</div>
+        <figure class="flex justify-center">
+          <img [src]="product.image" alt="{{product.title}}" class="object-cover w-40 h-40" />
+        </figure>
+        <p>{{product.description}}</p>
+        <p>{{product.price | currency}}</p>
+        <p [ngStyle]="{color: product.stock > 0 ? 'green' : 'red' }">
+          {{product.stock > 0 ? 'Available in Stock' : 'Out of Stock'}}
+        </p>
+        <div class="card-actions justify-end">
+          <button class="btn btn-grey" *ngIf="product.inStock; else notifyMe">Buy Now</button>
+          <ng-template #notifyMe>
+            <button class="btn btn-grey">Notify Me</button>
+          </ng-template>
+        </div>
+
+    
+    
+     
+        <button class="btn" (click)="closeDialog()">Close</button>
+     
+    </div>
+ 
+</dialog>

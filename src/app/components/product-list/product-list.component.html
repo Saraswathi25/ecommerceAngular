@@ -1,0 +1,23 @@
+<app-filter
+  [all]="totalProducts"
+  [inStock]="inStockProducts"
+  [outOfStock]="outOfStock" 
+  (selectedRadioValue)="onValueChange($event)"
+></app-filter>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+  <div *ngFor="let product of filteredProducts" (click)="onProductClicked(product)">
+    <app-product [product]="product"></app-product>
+  </div>
+</div>
+<!-- <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+ pass value to sibling using template ref eg :(click)="selectedProduct =product"
+   <div  *ngFor="let product of productList" (click)="onProductClicked(product)">
+   
+  <app-product
+    [product]="product"
+   *ngIf="(searchText == ''|| product.title.toLowerCase().includes(searchText))&& 
+   (selectedRadioButton === 'all' || (product.stock>0).toString() === selectedRadioButton)"
+  
+  ></app-product>
+</div>
+</div> -->

@@ -1,0 +1,9 @@
+<app-search  (emitSearchText)="onSearch($event)"></app-search>
+
+<div class="container mx-auto p-8">
+    <app-product-list [searchText]="searchText" ></app-product-list>
+    <!--passing value to siblings using template ref var #selectedProdRef and accessing the property of that class -->
+    <product-detail *ngIf="prod" [product]="prod"></product-detail>
+  </div>
+
+  

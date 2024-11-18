@@ -1,0 +1,17 @@
+<div class="card bg-base-100 w-80 shadow-xl" appHighlight>
+  <div class="card-body">
+    <h2 class="card-title">{{product.title}}</h2>
+    <div class="badge" setbackground>{{product.discountPercentage}}% OFF</div>
+    <figure class="flex justify-center">
+      <img [src]="product.image" alt="{{product.title}}" class="object-cover w-40 h-40" />
+    </figure>
+    <p>{{product.description}}</p>
+    <p>{{product.price | currency}}</p>
+    <p [ngStyle]="{color: product.stock > 0 ? 'green' : 'red' }">
+      {{product.stock > 0 ? 'Available in Stock' : 'Out of Stock'}}
+    </p>
+    <div class="card-actions justify-end">
+      <button class="btn btn-grey" [disabled]="product.stock === 0">Buy Now</button>
+    </div>
+  </div>
+</div>
