@@ -30,4 +30,13 @@ export class ProductDetailComponent {
   closeDialog() {
     this.isDialogOpen = false; // Close the dialog when "Close" button is clicked
   }
+
+  addToCart(prod: Product) {
+    if (prod) {
+      console.log('Adding product to cart:', prod);
+      this.prodService.addToCart(prod); 
+      this.closeDialog()
+    }
+  }
+  
 }

@@ -22,6 +22,7 @@ export class ProductListComponent {
       "price": 2.99,
       "stock": 50,
       "inStock":true,
+      "quantity":1,
       "discountPercentage": 10,
       "image": "assets/croissant.png"
     },
@@ -32,6 +33,7 @@ export class ProductListComponent {
       "price": 1.99,
       "stock": 100,
       "inStock":true,
+      "quantity":1,
       "discountPercentage": 5,
       "image": "assets/bagel.png"
     },
@@ -42,6 +44,7 @@ export class ProductListComponent {
       "price": 4.99,
       "stock": 0,
       "inStock":false,
+      "quantity":1,
       "discountPercentage": 12,
       "image": "assets/donut.png"
     },
@@ -52,6 +55,7 @@ export class ProductListComponent {
       "price": 3.49,
       "stock": 75,
       "inStock":true,
+      "quantity":1,
       "discountPercentage": 8,
       "image": "assets/muffin.png"
     },
@@ -62,6 +66,7 @@ export class ProductListComponent {
       "price": 3.25,
       "stock": 60,
       "inStock":true,
+      "quantity":1,
       "discountPercentage": 10,
       "image": "assets/cookies.png"
     },
@@ -72,6 +77,7 @@ export class ProductListComponent {
       "price": 2.49,
       "stock": 90,
       "inStock":true,
+      "quantity":1,
       "discountPercentage": 7,
       "image": "assets/bread.png"
     },
@@ -82,6 +88,7 @@ export class ProductListComponent {
       "price": 3.99,
       "stock": 55,
       "inStock":true,
+      "quantity":1,
       "discountPercentage": 10,
       "image": "assets/cinnamon-roll.png"
     },
@@ -92,6 +99,7 @@ export class ProductListComponent {
       "price": 2.99,
       "stock": 45,
       "inStock":true,
+      "quantity":1,
       "discountPercentage": 5,
       "image": "assets/cake.png"
     }
