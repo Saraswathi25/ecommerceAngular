@@ -1,5 +1,6 @@
 import { EventEmitter, Injectable } from '@angular/core';
 import { Product } from '../components/Models/Product';
+import { BehaviorSubject, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +12,13 @@ export class ProductService {
   onProductClicked: EventEmitter<Product>= new EventEmitter<Product>();
 
   cartUpdated: EventEmitter<Product[]>=new EventEmitter<Product[]>();
+
+  total: EventEmitter<number>= new EventEmitter<number>();
+  
+  totalSubject = new BehaviorSubject<number>(0);
+  
+  private shippingDetailsSubject = new BehaviorSubject<any>(null); // Using BehaviorSubject
+  shippingDetails$ = this.shippingDetailsSubject.asObservable();
 
   showProductDetails(prod: Product): void {
     console.log('Product selected in service:', prod); // Confirm product is emitted here
@@ -25,5 +33,14 @@ export class ProductService {
   
   getCartProducts(): Product[] {
     return [...this.cartProducts]; // Return a copy of the cart
+  }
+
+  updateTotal(total:number){
+    this.totalSubject.next(total)
+  }
+
+  checkoutDetails(checkoutForm){
+    this.shippingDetailsSubject.next(checkoutForm);
+
   }
 }

@@ -1,5 +1,7 @@
 <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle"  [open]="isDialogOpen">
   <div class="modal-box">
+   
+      <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2" (click)="closeDialog()">✕</button>
   
         <h2 class="card-title">{{product.title}}</h2>
         <div class="badge mt-4" setbackground>{{product.discountPercentage}}% OFF</div>
@@ -12,7 +14,7 @@
           {{product.stock > 0 ? 'Available in Stock' : 'Out of Stock'}}
         </p>
         <div class="card-actions justify-end">
-          <button class="btn btn-grey" (click)="addToCart(product)" *ngIf="product.inStock; else notifyMe">Buy Now</button>
+          <button class="btn bg-grey text-white" (click)="addToCart(product)" *ngIf="product.inStock; else notifyMe">Buy Now</button>
           <ng-template #notifyMe>
             <button class="btn btn-grey">Notify Me</button>
           </ng-template>
@@ -21,7 +23,7 @@
     
     
      
-        <button class="btn" (click)="closeDialog()">Close</button>
+        <!-- <button class="btn" (click)="closeDialog()">Close</button> -->
      
     </div>
  

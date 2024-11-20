@@ -9,7 +9,7 @@
 <div class="flex items-center justify-center space-x-2">
   <!-- template ref variable -->
   <input type="text" placeholder="Search..." class="input input-bordered w-96" #searchTextValue/>
-  <button class="btn btn-accent" (click)="onSearch(searchTextValue)">Search</button>
+  <button class="btn btn-accent text-white" (click)="onSearch(searchTextValue)">Search</button>
 </div>
 <div class="card-title flex items-center justify-center mt-3" *ngIf="searchText != ''">
   <span>Search results for:</span>

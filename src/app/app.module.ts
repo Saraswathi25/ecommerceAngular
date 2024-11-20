@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SearchComponent } from './components/search/search.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContainerComponent } from './components/container/container.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { ProductComponent } from './components/product-list/product/product.component';
@@ -15,6 +15,8 @@ import { HighlightDirective } from './components/customDirectives/highlight.dire
 import { CartComponent } from './components/cart/cart.component';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
+import { CheckoutComponent } from './components/checkout/checkout.component';
+import { ThankyouComponent } from './components/thankyou/thankyou.component';
 
 
 @NgModule({
@@ -29,12 +31,16 @@ import { AppRoutingModule } from './app-routing.module';
     ProductDetailComponent,
     setBackground,
     HighlightDirective,
-    CartComponent
+    CartComponent,
+    CheckoutComponent,
+    ThankyouComponent
+    
     
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule
   ],
   providers: [],
