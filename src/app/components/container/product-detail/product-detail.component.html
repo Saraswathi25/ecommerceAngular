@@ -14,7 +14,7 @@
           {{product.stock > 0 ? 'Available in Stock' : 'Out of Stock'}}
         </p>
         <div class="card-actions justify-end">
-          <button class="btn bg-grey text-white" (click)="addToCart(product)" *ngIf="product.inStock; else notifyMe">Buy Now</button>
+          <button class="btn bg-grey " (click)="addToCart(product)" *ngIf="product.inStock; else notifyMe">Buy Now</button>
           <ng-template #notifyMe>
             <button class="btn btn-grey">Notify Me</button>
           </ng-template>
